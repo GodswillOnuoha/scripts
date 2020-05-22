@@ -1,0 +1,14 @@
+[flake8]
+max-line-length = 120
+max-complexity = 10
+filename = *.py
+format = default
+exclude =
+    */migrations/*,
+    wsgi.py
+extend-ignore =
+    # ‘async’ and ‘await’ are reserved keywords starting with Python 3.7
+    W606
+per-file-ignores =
+    # Setting files import '*' from common.py, this is intended.
+    */settings/*:F405
